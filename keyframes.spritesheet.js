@@ -17,7 +17,7 @@
         width: 0,
         offsetX: 0,
         offsetY: 0,
-        count: (opts.rows * opts.cols),
+        count: (opts.rows-1 * opts.cols-1),
         spriteWidth: (opts.width / opts.cols),
         spriteHeight: (opts.height / opts.rows),
         loop: true
@@ -29,13 +29,13 @@
 
       spriteStep = 100 / opts.count;
       spriteFrames = {};
-      var x = opts.offsetX - opts.spriteWidth;
-      var y = opts.offsetY - opts.spriteHeight;
+      var x = opts.offsetX;
+      var y = opts.offsetY;
       for(var i = 0; i < opts.count; i++){
         spriteFrames[Math.round(spriteStep * i) + '%'] = {
           'background-position': '-' + (opts.spriteWidth + x) + 'px -' + (opts.spriteHeight + y) + 'px'
         }
-        if(x >= (opts.cols * opts.spriteWidth)){
+        if(x >= opts.width - opts.spriteWidth){
           y += opts.spriteHeight;
           x = 0;
         }else{
@@ -65,7 +65,7 @@
           loops = 'infinite';
         }
 
-        var animate = name + ' ' + time + ' steps(' + opts.count + ') ' + loops;
+        var animate = name + ' ' + time + ' steps(1) ' + loops;
         var existingAnimation = this.css('animation');
         if(existingAnimation.split(' ')[0] != "none"){
           animate = existingAnimation + ', ' + animate;
