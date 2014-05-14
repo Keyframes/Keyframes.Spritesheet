@@ -1,7 +1,7 @@
 
 (function() {
 
-  vendorPrefix + vendorPrefix = $.keyframe.getVendorPrefix();
+  vendorPrefix = $.keyframe.getVendorPrefix();
 
   $.keyframe = $.extend($.keyframe, {
 
@@ -10,29 +10,29 @@
     spriteSheet: function(opts){
 
       var defaults = {
-        name: ''
+        name: '',
         rows: 1,
         cols: 1,
         height: 0,
         width: 0,
         offsetX: 0,
         offsetY: 0,
-        count: (rows * cols),
+        count: (opts.rows * opts.cols),
         spriteWidth: (opts.width / opts.cols),
         spriteHeight: (opts.height / opts.rows),
         loop: true
       };
 
-      $.extend(defaults, opts);
+      opts = $.extend(defaults, opts);
 
       $.keyframe.spriteSheets[opts.name] = opts;
 
       spriteStep = 100 / opts.count;
       spriteFrames = {};
-      var x = opts.offsetX;
-      var y = opts.offsetY;
+      var x = opts.offsetX - opts.spriteWidth;
+      var y = opts.offsetY - opts.spriteHeight;
       for(var i = 0; i < opts.count; i++){
-        spriteFrames[(spriteStep * i) + '%'] = {
+        spriteFrames[Math.round(spriteStep * i) + '%'] = {
           'background-position': '-' + (opts.spriteWidth + x) + 'px -' + (opts.spriteHeight + y) + 'px'
         }
         if(x >= (opts.cols * opts.spriteWidth)){
@@ -66,11 +66,12 @@
         }
 
         var animate = name + ' ' + time + ' steps(' + opts.count + ') ' + loops;
-        var existingAnimation = $(this).css('animation');
-        if(existingAnimation){
+        var existingAnimation = this.css('animation');
+        if(existingAnimation.split(' ')[0] != "none"){
           animate = existingAnimation + ', ' + animate;
         }
-        $(this).css(vendorPrefix + 'animation', animate);
+        console.log(this);
+        this.css(vendorPrefix + 'animation', animate);
       }
     }
   }
