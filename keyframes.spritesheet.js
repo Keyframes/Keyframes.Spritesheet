@@ -49,30 +49,24 @@
 
   });
 
-  $.fn.playSpriteSheet = function(name, time, loops, opts){
-    if(opts){
-      opts['name'] = name;
-      $.keyframe.spriteSheet(opts);
-      $(this).playSpriteSheet(name);
-    }else{
-      opts = $.keyframe.spriteSheets[name];
-      if(opts){
-        if(loops){
-          if(loops < 0){
-            loops = 'infinite';
-          }
-        }else{
-          loops = 'infinite';
-        }
-
-        var animate = name + ' ' + time + ' steps(1) ' + loops;
-        var existingAnimation = this.css('animation');
-        if(existingAnimation.split(' ')[0] != "none"){
-          animate = existingAnimation + ', ' + animate;
-        }
-        this.css(vendorPrefix + 'animation', animate);
-      }
+  $.fn.playSpriteSheet = function(name, time, loops, keyframes){
+    if(keyframes){
+      $.keyframe.define(keyframes);
     }
+    if(loops){
+      if(loops < 0){
+        loops = 'infinite';
+      }
+    }else{
+      loops = 'infinite';
+    }
+
+    var animate = name + ' ' + time + ' steps(1) ' + loops;
+    var existingAnimation = this.css('animation');
+    if(existingAnimation.split(' ')[0] != "none"){
+      animate = existingAnimation + ', ' + animate;
+    }
+    this.css(vendorPrefix + 'animation', animate);
   }
 
 }).call(this);
