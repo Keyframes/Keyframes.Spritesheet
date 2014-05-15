@@ -17,7 +17,7 @@
         width: 0,
         offsetX: 0,
         offsetY: 0,
-        count: (opts.rows-1 * opts.cols-1),
+        count: (opts.rows * opts.cols),
         spriteWidth: (opts.width / opts.cols),
         spriteHeight: (opts.height / opts.rows),
         loop: true
@@ -33,7 +33,7 @@
       var y = opts.offsetY;
       for(var i = 0; i < opts.count; i++){
         spriteFrames[Math.round(spriteStep * i) + '%'] = {
-          'background-position': '-' + (opts.spriteWidth + x) + 'px -' + (opts.spriteHeight + y) + 'px'
+          'background-position': '-' + x + 'px -' + y + 'px'
         }
         if(x >= opts.width - opts.spriteWidth){
           y += opts.spriteHeight;
@@ -70,7 +70,6 @@
         if(existingAnimation.split(' ')[0] != "none"){
           animate = existingAnimation + ', ' + animate;
         }
-        console.log(this);
         this.css(vendorPrefix + 'animation', animate);
       }
     }
