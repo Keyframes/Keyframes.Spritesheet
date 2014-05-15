@@ -1,4 +1,3 @@
-
 (function() {
 
   vendorPrefix = $.keyframe.getVendorPrefix();
