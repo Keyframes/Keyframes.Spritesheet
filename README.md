@@ -39,6 +39,10 @@ $(selector).playSpriteSheet(name, time, loop, keyframes);
 $('.spriteContainer').playSpriteSheet('gem', '3s', -1, keyframes);
 ```
 
+Example
+-------
+http://jsfiddle.net/22Hyq/
+
 Credits
 -------
 "Gems" Image created by Lokiare. Image is subject to the creative commons license: http://creativecommons.org/licenses/by/3.0/
