@@ -1,0 +1,54 @@
+<html class=" -webkit-"><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Spritesheet Test - jsFiddle demo</title>
+  
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.js"></script>
+  
+  <script type="text/javascript" src="https://rawgit.com/jQueryKeyframes/jQuery.Keyframes/master/jquery.keyframes.min.js"></script><style class="keyframe-style" id="boost-keyframe" type="text/css"> .boostKeyframe{-webkit-transform:scale3d(1,1,1);}</style>
+  <script type="text/javascript" src="https://rawgithub.com/jQueryKeyframes/Keyframes.Pathfinder/master/keyframes.pathfinder.js"></script><style type="text/css"></style>
+  <script type="text/javascript" src="keyframes.spritesheet.js"></script>
+  
+  <style type="text/css">
+  .spriteContainer{
+    width: calc(850px / 17);
+    height: calc(395px / 5);
+    background-image: url(http://c2.glitch.bz/items/2012-12-06/grand_ol_grinder__x1_tool_animation_png_1354836354.png);
+  }
+  </style>
+  
+
+
+<script type="text/javascript"> 
+$(window).load(function(){
+var grind = $.keyframe.spriteSheet({
+  name: 'grind',
+  rows: 5,
+  cols: 17,
+  width: 850,
+  height: 395,
+  count: (5 * 17 - 2)
+});
+
+var curvey = {
+    name: 'curvey'
+};
+
+curvey = $.keyframe.circlePath(curvey, [50, 50], 40);
+
+$.keyframe.define([curvey, grind]);
+
+$('.spriteContainer').playKeyframe('curvey 5000 linear 0 infinite normal forwards');
+$('.spriteContainer').playSpriteSheet('grind', '3s');
+});
+
+</script>
+</head>
+<body>
+  <div class="spriteContainer boostKeyframe" style="-webkit-animation: curvey 5s linear 0s infinite normal forwards running, grind 3s steps(1, end) infinite; -webkit-animation-play-state: running, initial;"></div>
+  
+
+
+
+
+
+</body></html>

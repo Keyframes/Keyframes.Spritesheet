@@ -62,9 +62,18 @@
 
     var animate = name + ' ' + time + ' steps(1) ' + loops;
     var existingAnimation = this.css(vendorPrefix + 'animation');
-    if(existingAnimation.split(' ')[0] != "none"){
-      animate = existingAnimation + ', ' + animate;
+    if(existingAnimation == ""){
+      existingAnimation = this[0].style.animation;
+      eaArray = existingAnimation.split(' ');
+      if(eaArray[eaArray.length-1] != "none"){
+        animate = existingAnimation + ', ' + animate;
+      }
+    }else{
+      if(existingAnimation.split(' ')[0] != "none"){
+        animate = existingAnimation + ', ' + animate;
+      }
     }
+    
     this.css(vendorPrefix + 'animation', animate);
     return this;
   }
