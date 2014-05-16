@@ -61,7 +61,7 @@
     }
 
     var animate = name + ' ' + time + ' steps(1) ' + loops;
-    var existingAnimation = this.css('animation');
+    var existingAnimation = this.css(vendorPrefix + 'animation');
     if(existingAnimation.split(' ')[0] != "none"){
       animate = existingAnimation + ', ' + animate;
     }
