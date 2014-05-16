@@ -66,6 +66,7 @@
       animate = existingAnimation + ', ' + animate;
     }
     this.css(vendorPrefix + 'animation', animate);
+    return this;
   }
 
 }).call(this);
