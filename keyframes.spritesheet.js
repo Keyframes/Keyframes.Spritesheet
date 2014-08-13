@@ -64,9 +64,11 @@
     var existingAnimation = this.css(vendorPrefix + 'animation');
     if(existingAnimation == ""){
       existingAnimation = this[0].style.animation;
-      eaArray = existingAnimation.split(' ');
-      if(eaArray[eaArray.length-1] != "none"){
-        animate = existingAnimation + ', ' + animate;
+      if(existingAnimation){
+        eaArray = existingAnimation.split(' ');
+        if(eaArray[eaArray.length-1] != "none"){
+          animate = existingAnimation + ', ' + animate;
+        }
       }
     }else{
       if(existingAnimation.split(' ')[0] != "none"){
