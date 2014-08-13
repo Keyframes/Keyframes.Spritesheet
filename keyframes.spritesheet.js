@@ -36,7 +36,7 @@
         }
         if(x >= opts.width - opts.spriteWidth){
           y += opts.spriteHeight;
-          x = 0;
+          x = opts.offsetX;
         }else{
           x += opts.spriteWidth;
         }
