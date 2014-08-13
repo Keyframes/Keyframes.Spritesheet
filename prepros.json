@@ -1,0 +1,81 @@
+{
+  "id": "e87991fe",
+  "cfgVersion": 1,
+  "name": "Keyframes.Spritesheet",
+  "files": {
+    "2e8f9ea2": {
+      "id": "2e8f9ea2",
+      "pid": "e87991fe",
+      "name": "README.md",
+      "input": "README.md",
+      "customOutput": false,
+      "type": "Md",
+      "config": {
+        "autoCompile": false,
+        "sanitize": false,
+        "gfm": true
+      }
+    },
+    "8eca7dfc": {
+      "id": "8eca7dfc",
+      "pid": "e87991fe",
+      "name": "keyframes.spritesheet.js",
+      "input": "keyframes.spritesheet.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
+    }
+  },
+  "imports": {},
+  "images": {
+    "1ad2e402": {
+      "id": "1ad2e402",
+      "pid": "e87991fe",
+      "path": "emeraldspinning.png",
+      "size": 30850,
+      "name": "emeraldspinning.png",
+      "type": "Png",
+      "initialSize": 30850,
+      "status": "NOT_OPTIMIZED"
+    }
+  },
+  "config": {
+    "watch": true,
+    "liveRefresh": true,
+    "liveRefreshDelay": 0,
+    "filterPatterns": "bower",
+    "useCustomServer": false,
+    "customServerUrl": "",
+    "cssPath": "css/",
+    "jsPath": "js/",
+    "htmlPath": "html/",
+    "minJsPath": "/",
+    "htmlExtension": ".html",
+    "cssPathType": "REPLACE_TYPE",
+    "htmlPathType": "REPLACE_TYPE",
+    "jsPathType": "REPLACE_TYPE",
+    "minJsPathType": "RELATIVE_FILEDIR",
+    "htmlTypes": "jade, haml, slim, markdown, md",
+    "cssTypes": "less, sass, stylus, scss, styl",
+    "jsTypes": "coffee, coffeescript, coffeescripts, ls, livescript, livescripts",
+    "cssPreprocessorPath": "",
+    "htmlPreprocessorPath": "",
+    "jsPreprocessorPath": "",
+    "minJsPreprocessorPath": "",
+    "autoprefixerBrowsers": "",
+    "ftpHost": "",
+    "ftpPort": "21",
+    "ftpRemotePath": "",
+    "ftpIgnorePreprocessorFiles": true,
+    "ftpType": "FTP",
+    "ftpExcludePatterns": "",
+    "ftpSecure": false,
+    "ftpPassword": "",
+    "ftpUsername": ""
+  }
+}
