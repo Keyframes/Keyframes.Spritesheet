@@ -2,12 +2,20 @@ Keyframes.Spritesheet
 =====================
 Keyframes.Spritesheet is a plugin for Keyframes that easily generates css3 keyframes for elements using animated spritesheets.
 
+Installation
+-----
+
+```javascript
+import Spritesheet from '@keyframes/spritesheet';
+Keyframes.plugin(Spritesheet);
+```
+
 Usage
 -----
 
 #### Defining spritesheet keyframes.
 ```javascript
-var keyframes = $.keyframe.spriteSheet({
+var keyframes = Keyframes.spriteSheet({
   name: 'gem', // Name of the spritesheet
   rows: 6, // Number of rows
   cols: 7, // Number of columns
@@ -18,9 +26,11 @@ var keyframes = $.keyframe.spriteSheet({
   count: 39 // [Optional] Define the number of sprites in total
 });
 ```
+
 #### Applying them to an element
 ```javascript
-$(selector).playSpriteSheet(name, time, loop, keyframes);
+const item = new Keyframes(document.getElementById('item'));
+item.playSpriteSheet(name, time, loop, keyframes);
 ```
 * ```name``` - name of the spritesheet.
 * ```time``` - time for the animation to complete.
@@ -29,7 +39,8 @@ $(selector).playSpriteSheet(name, time, loop, keyframes);
 
 #### For example
 ```javascript
-$('.spriteContainer').playSpriteSheet('gem', '3s', -1, keyframes);
+const item = new Keyframes(document.getElementById('item'));
+item.playSpriteSheet('gem', '3s', -1, keyframes);
 ```
 
 Example
