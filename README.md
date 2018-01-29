@@ -1,13 +1,6 @@
 Keyframes.Spritesheet
 =====================
-Keyframes.Spritesheet is a plugin for jQuery.Keyframes that easily generates css3 keyframes for elements using animated spritesheets.
-
-Installation
-------------
-
-```
-bower install keyframesspritesheet
-```
+Keyframes.Spritesheet is a plugin for Keyframes that easily generates css3 keyframes for elements using animated spritesheets.
 
 Usage
 -----
