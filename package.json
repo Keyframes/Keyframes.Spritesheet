@@ -1,6 +1,6 @@
 {
   "name": "@keyframes/spritesheet",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Keyframes.Spritesheet is a plugin for Keyframes that easily generates css3 keyframes for elements using animated spritesheets.",
   "main": "src/keyframes.spritesheet.js",
   "scripts": {
@@ -27,18 +27,18 @@
   },
   "homepage": "https://github.com/Keyframes/Keyframes.Spritesheet",
   "dependencies": {
-    "@keyframes/core": "^1.1.4"
+    "@keyframes/core": "^2.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.0",
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
     "babelify": "^10.0.0",
-    "browserify": "^16.2.3",
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "browserify": "^16.5.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0"
   }
 }

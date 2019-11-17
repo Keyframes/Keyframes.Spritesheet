@@ -51,12 +51,12 @@ export default (Keyframes) => {
         }
 
         let animate = `${name} ${time} steps(1) ${loops}`;
-        const existingAnimation = this.elem.style.animation;
+        const existingAnimation = this.mountedElement.style.animation;
         if (existingAnimation && existingAnimation.split(' ')[0] !== 'none') {
             animate = `${existingAnimation}, ${animate}`;
         }
 
-        this.elem.style.animation = animate;
+        this.mountedElement.style.animation = animate;
         return this;
     };
 };
