@@ -1,6 +1,6 @@
 {
   "name": "@keyframes/spritesheet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Keyframes.Spritesheet is a plugin for Keyframes that easily generates css3 keyframes for elements using animated spritesheets.",
   "main": "src/keyframes.spritesheet.js",
   "scripts": {
